@@ -2,9 +2,11 @@ window.addEventListener('load', function() {
     const loading = document.getElementById('loading');
     const loginContainer = document.getElementById('loginContainer');
 
-    // Sembunyikan animasi loading dan tampilkan kontainer login
-    loading.style.display = 'none';
-    loginContainer.classList.remove('hidden');
+    // Menunda penyembunyian animasi loading selama beberapa detik
+    setTimeout(() => {
+        loading.style.display = 'none';
+        loginContainer.classList.remove('hidden');
+    }, 10000); // Durasi 3000ms (3 detik)
 });
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
